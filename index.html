@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    
+    <h1 class="my-5 text-center">Add Product</h1>
+
+    <div class="row container-lg my-5 mx-5">
+        <form>
+
+            <div class="my-3">
+                <label class="form-label">Item: </label>
+                <input type="text" id="itemBox" placeholder="Insert item"><br>
+            </div>
+
+            <div class="my-3">
+                <label class="form-label">Price: </label>
+                <input type="number" id="priceBox" placeholder="Insert price ($)"><br>
+            </div>
+
+            <div class="my-3 col-3">
+                <label class="form-label">Food Category:</label>
+                <select id="categorySelect" class="form-select">
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="drinks">Drinks</option>
+                    <option value="meat">Meat</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="basic">Basic</option>
+                </select><br>
+            </div>
+
+            <div class="my-3">
+                <label class="form-label">Image Link: </label>
+                <input type="text" id="linkBox" placeholder="Insert link"><br>
+            </div>
+
+            <button type = button class="button my-3" onclick="addProducts()">Add Product</button>
+
+        </form>
+    </div>
+
+    <div class="container-lg">
+        <h2>My Cart</h2>
+
+        <table id="table" class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
